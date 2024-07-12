@@ -1,0 +1,23 @@
+<div class="author">
+    <h1 class="author__heading">Hi, I'm FrozenBerrys.</h1>
+    <p class="author__body">Learning Web Development, Amateur Pianist</p>
+</div>
+
+<section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+
+    <ul class="article-ul">
+        <!-- loops through "data" -->
+        <% data.forEach(blog => { %> 
+            <li>
+                <a href="/blog/<%= blog._id %>"> 
+                    <span><%= blog.title %></span>
+                    <span class="article-list__date"><%= blog.createdAt.toDateString() %></span>
+                </a> 
+            </li>
+        <% }) %>
+
+
+    </ul>
+
+</section>

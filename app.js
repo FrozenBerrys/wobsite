@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require('express');
 const expressLayout = require('express-ejs-layouts');
 const mongoose = require('mongoose');
+const connectDB = require('./server/config/db');
+connectDB();
 
 
 const app = express();
