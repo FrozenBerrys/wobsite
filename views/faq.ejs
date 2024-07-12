@@ -1,0 +1,13 @@
+<section>
+    <ul class="faq__list">
+        <!-- loops through "data" -->
+        <% data.forEach(faq => { %> 
+            <li>
+                <h1 class="faq__title"><%= faq.title %></h1>
+                <p><%= faq.body %></p>
+                <hr>
+            </li>
+        <% }) %>
+    </ul>
+
+</section>

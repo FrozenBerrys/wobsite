@@ -3,9 +3,10 @@
 :root {
     --black: #000000;
     --brown: #2c1702;
-    --red: #b30000;
+    --red: #e20000;
     --lime: #00df13;
     --white: #ffffff;
+    --purple: rgb(83, 0, 142);
 
     --font-size-base: 1rem;
     --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
@@ -13,6 +14,26 @@
     --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem); 
     --border-radius: 10px;
 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+select,
+textarea {
+    font-family: monospace;
+    font-size: var(--font-size-base);
+    color: var(--black);
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    outline:none;
+    -webkit-text-fill-color: var(--lime);
+    border-radius: var(--border-radius);
+    caret-color: var(--lime);
 }
 
 body {
@@ -44,7 +65,7 @@ body {
     grid-template-areas: 
     "logo button"
     "menu menu";
-    padding-top: 10px;
+    padding-top: 0px;
   }
 
   @media only screen and (min-width: 768px) {
@@ -108,15 +129,12 @@ body {
     color: var(--white);
   }
   
-  /* SeachBar */
+/* SearchBar */
 .searchBar {
   visibility: hidden;
-  transform: translateY(-100px);
-  background-color: var(--white);
-  padding: 4px 0;
+  transform: translateY(-100px); 
   position: absolute;
-  left: 0;
-  right: 0;
+  right: 220px;
 }
 
 .searchBar.open {
@@ -124,17 +142,23 @@ body {
   transition: transform 0.1s;
 }
 
+.search__body {
+  margin-top:5px;
+}
+
 .searchBar input {
+
   margin: 0;
   border: 0;
 }
 
-#searchClose {
+/* #searchClose {
   position: absolute;
   top: 0;
   right: 0;
+  color: var(--gray-light);
   padding: 15px;
-}
+} */
 
 /* Dashboard Admin */
 .admin-title {
@@ -231,6 +255,7 @@ body {
   font-size: 24px;
   cursor: pointer;
   transition: filter 0.1s;
+
 }
 
 /* .article-ul li:not(:last-child) {
@@ -238,10 +263,28 @@ body {
 } */
 
 .article-ul li:hover {
-    background-color: #000000;
+    border:white, solid, 2px;
+    border-radius: var(--border-radius);
 }
 
 .article {
   white-space: pre-wrap;
+}
+
+.faq__list {
+  list-style-type: none;
+}
+
+.faq__title {
+  color:var(--white);
+}
+
+p {
+  color:var(--white);
+}
+
+a {
+  color:var(--lime);
+  text-decoration: none;
 }
 
