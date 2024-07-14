@@ -6,8 +6,7 @@ const Faq = require("../models/Faq");
 //Routes
 router.get('', (req,res)=>{
     const locals = {
-        title: "NodeJs Blog",
-        description: "Simple blog created with NodeJS, MongoDB and Express"
+        title: "FrozenBerrys' wobsite",
     } // sending locals. as data to dynamically load into the layout 
     res.render("index", { locals });
 })
@@ -17,7 +16,7 @@ router.get('/blag', async (req,res)=>{
 
         // sending locals. as data to dynamically load into the layout 
         const locals = {
-            title: "blag"
+            title: "blag",
         }
         const data = await Blog.find();
         res.render("blag", { locals, data });
@@ -32,7 +31,7 @@ router.get('/blog/:id', async (req,res)=>{
         // sending locals. as data to dynamically load into the layout 
 
         const locals = {
-            title: data.title ,
+            title: data.title,
             //description: "Simple blog created with NodeJS, MongoDB and Express" MAYBE INCORPORATE INTO DATABASE
         }
         res.render("blog", { locals, data });
@@ -54,7 +53,7 @@ router.get('/faq', async (req,res)=>{
 
         // sending locals. as data to dynamically load into the layout 
         const locals = {
-            title: "faq"
+            title: "faq",
         }
         const data = await Faq.find();
         res.render("faq", { locals, data });

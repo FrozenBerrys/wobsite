@@ -44,6 +44,16 @@ body {
     margin: 0;
 }
 
+.btn {
+  background-color: var(--lime);
+  border: none;
+  color: white; 
+  padding: 16px 16px;
+  text-decoration: none;
+  margin: 4px 2px; 
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
 
 /* Layout */
 .container {
@@ -122,10 +132,14 @@ body {
   .header__nav ul a {
     padding: 10px;
     text-decoration: none;
-    color: var(--lime);
+    color: var(--lime); 
   }
 
   .header__nav ul a:hover {
+    color: var(--white);
+  }
+
+  .header__nav ul a:active {
     color: var(--white);
   }
   
@@ -134,7 +148,7 @@ body {
   visibility: hidden;
   transform: translateY(-100px); 
   position: absolute;
-  right: 220px;
+  right: 210px;
 }
 
 .searchBar.open {
@@ -176,10 +190,18 @@ body {
   display: inline-block;
 }
 
+.admin-title .btn-delete.btn {
+  background-color: var(--red);
+}
+
+.admin-post-controls .btn-delete.btn {
+  background-color: var(--red);
+}
+
 .admin-post-controls .btn  {
   display: inline-block;
-  background-color: var(--white);
-  color: var(--red);
+  background-color: var(--lime);
+  color: var(--white);
   border: 0;
   text-decoration: none;
   font-size: .8rem;
@@ -212,6 +234,8 @@ body {
   margin-top: 4rem;
   font-weight: 400;
 }
+
+
 
 .article-ul {
   list-style-type: none;
@@ -269,6 +293,7 @@ body {
 
 .article {
   white-space: pre-wrap;
+  color: var(--white);
 }
 
 .faq__list {
